@@ -8,9 +8,9 @@ function App() {
 
   return (
     <div>
-      <Sidebar/>
+      <Sidebar />
     </div>
   )
 }
 
-export default App
+export default App;

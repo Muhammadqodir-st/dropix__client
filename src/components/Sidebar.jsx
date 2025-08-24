@@ -1,4 +1,4 @@
-import logo from "../assets/logo-white.svg"
+import logo from "../assets/logo.svg"
 import { House } from "lucide-react";
 import { SquarePlus } from "lucide-react";
 import { Bookmark } from "lucide-react";
