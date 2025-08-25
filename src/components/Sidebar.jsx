@@ -12,9 +12,11 @@ const Sidebar = () => {
     return (
         <nav className="w-[265px] h-screen sticky top-0 left-0 bg-slate-800 flex-shrink-0">
             {/* header */}
-            <div className="w-full py-5 px-6 sticky top-0 left-0 cursor-pointer">
-                <img src={logo} alt="" />
-            </div>
+            <Link to={"/"}>
+                <div className="w-full py-5 px-6 sticky top-0 left-0 cursor-pointer">
+                    <img src={logo} alt="" />
+                </div>
+            </Link>
             {/* navigatsion */}
             <div className="w-full py-5 flex flex-col gap-1">
                 <p className="text-white text-[12px] px-6">NAVIGATION</p>
