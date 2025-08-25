@@ -8,6 +8,8 @@ import AddPicture from './pages/AddPicture';
 import SavedPicture from './pages/SavedPicture';
 import Profile from './pages/Profil'
 import MainLayout from './layout/MainLayout';
+import Login from './pages/Login'
+import SingUp from './pages/SingUp';
 
 function App() {
   const router = createBrowserRouter(
@@ -19,6 +21,8 @@ function App() {
           <Route path='/saved' element={<SavedPicture />} />
           <Route path='/profile' element={<Profile />} />
         </Route>
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<SingUp />} />
       </Route>
     )
   )

@@ -4,13 +4,13 @@ import { SquarePlus } from "lucide-react";
 import { Bookmark } from "lucide-react";
 import { CircleUser } from "lucide-react";
 
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
     const location = useLocation()
 
     return (
-        <nav className="w-[265px] h-screen sticky top-0 left-0 bg-slate-800">
+        <nav className="w-[265px] h-screen sticky top-0 left-0 bg-slate-800 flex-shrink-0">
             {/* header */}
             <div className="w-full py-5 px-6 sticky top-0 left-0 cursor-pointer">
                 <img src={logo} alt="" />
