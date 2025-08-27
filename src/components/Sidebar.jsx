@@ -6,14 +6,16 @@ import { CircleUser } from "lucide-react";
 
 import { Link, useLocation } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({ open }) => {
     const location = useLocation()
+    console.log(open);
+
 
     return (
         <nav className="w-[265px] h-screen sticky top-0 left-0 bg-slate-800 flex-shrink-0">
             {/* header */}
             <Link to={"/"}>
-                <div className="w-full py-5 px-6 sticky top-0 left-0 cursor-pointer">
+                <div className="w-full py-5 px-6 sticky top-0 left-0 bg-slate-800  cursor-pointer">
                     <img src={logo} alt="" />
                 </div>
             </Link>

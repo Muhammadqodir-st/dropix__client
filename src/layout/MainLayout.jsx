@@ -5,12 +5,18 @@ import { Outlet } from "react-router-dom"
 import Sidebar from "../components/Sidebar"
 import Header from "../components/Header"
 
+// react 
+import { useState } from "react"
+
 export default function MainLayout() {
+    // states 
+    const [open, setOpen] = useState(true);
+
     return (
         <div className="flex">
-            <Sidebar />
-            <div className='w-full bg-[#f2f2f2]'>
-                <Header />
+            {open && <Sidebar />}
+            <div className='w-full h-full bg-[#f2f2f2]'>
+                <Header setOpen={setOpen} open={open} />
                 <Outlet />
             </div>
         </div>
