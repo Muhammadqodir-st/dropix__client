@@ -2,7 +2,7 @@ import { useState } from "react"
 
 export default function Home() {
 
-    const [posts, setPosts] = useState([
+    const [posts] = useState([
         {
             Image: "https://i.pinimg.com/1200x/38/8d/25/388d251482523d1a053b6bd285c7a02a.jpg",
         },
@@ -44,14 +44,14 @@ export default function Home() {
         },
         {
             Image: "https://i.pinimg.com/1200x/83/c9/1f/83c91f57ad4d32c4d679f1d349c7cb66.jpg"
-        },  
+        },
+    ]);
 
-    ])
 
     return (
         <div className="w-full px-4 flex flex-col">
             {/* category btns */}
-            <div className="flex items-center gap-3 sticky top-0 left-0 bg-[#f2f2f2] py-3 z-10">
+            <div className="flex items-center gap-3 sticky top-0 left-0 bg-[#f2f2f2] py-3 z-10 overflow-auto">
                 <button className="py-[3px] px-[15px] text-[14px] border rounded-lg border-gray-500 hover:border-indigo-600 hover:text-indigo-600 cursor-pointer">All</button>
                 <button className="py-[3px] px-[15px] text-[14px] border rounded-lg border-gray-500 hover:border-indigo-600 hover:text-indigo-600 cursor-pointer">GAMING</button>
                 <button className="py-[3px] px-[15px] text-[14px] border rounded-lg border-gray-500 hover:border-indigo-600 hover:text-indigo-600 cursor-pointer">CAR</button>
@@ -61,14 +61,14 @@ export default function Home() {
                 <button className="py-[3px] px-[15px] text-[14px] border rounded-lg border-gray-500 hover:border-indigo-600 hover:text-indigo-600 cursor-pointer">BOOK</button>
             </div>
             {/* posts */}
-            <div className="max-w-full  columns-6">
+            <div className="max-w-full  columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6">
                 {posts.map((post, index) => {
                     return (
                         <div key={index} className="mb-5 cursor-pointer">
                             <img className="rounded-xl" src={post.Image} alt="img" />
                         </div>
                     )
-                })}
+                })};
             </div>
         </div>
     )
