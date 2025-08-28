@@ -22,27 +22,27 @@ const Sidebar = () => {
                 <p className="text-white text-[12px] px-6 max-[950px]:hidden">NAVIGATION</p>
                 <div className="flex flex-col max-[950px]:flex-row justify-between">
                     <Link to={"/"}>
-                        <div className={location.pathname === "/" ? "py-3 px-5 flex items-center gap-3 text-[16px] text-white  border-l-3 border-indigo-600 bg-slate-900 max-[950px]:border-b-3 max-[950px]:border-l-0" : "py-3 px-5 border-l-3 border-slate-800 flex items-center gap-3 text-[16px] text-white hover:bg-slate-900 hover:border-indigo-600 cursor-pointer max-[950px]:border-b-3 max-[950px]:border-l-0"}>
+                        <div className={location.pathname === "/" ? "py-3 px-5 flex items-center gap-3 text-[16px] text-white  border-l-3 border-indigo-600 bg-slate-900 max-[950px]:border-l-0" : "py-3 px-5 border-l-3 border-slate-800 flex items-center gap-3 text-[16px] text-white hover:bg-slate-900 hover:border-indigo-600 cursor-pointer max-[950px]:border-l-0"}>
                             <House size={20} />
-                            <p>Home</p>
+                            <p className="max-[600px]:hidden">Home</p>
                         </div>
                     </Link>
                     <Link to={"/add"}>
-                        <div className={location.pathname === "/add" ? "py-3 px-5 flex items-center gap-3 text-[16px] text-white  border-l-3 border-indigo-600 bg-slate-900 max-[950px]:border-b-3 max-[950px]:border-l-0" : "py-3 px-5 border-l-3 border-slate-800 flex items-center gap-3 text-[16px] text-white hover:bg-slate-900 hover:border-indigo-600 cursor-pointer max-[950px]:border-b-3 max-[950px]:border-l-0"}>
+                        <div className={location.pathname === "/add" ? "py-3 px-5 flex items-center gap-3 text-[16px] text-white  border-l-3 border-indigo-600 bg-slate-900 max-[950px]:border-l-0" : "py-3 px-5 border-l-3 border-slate-800 flex items-center gap-3 text-[16px] text-white hover:bg-slate-900 hover:border-indigo-600 cursor-pointer max-[950px]:border-l-0"}>
                             <SquarePlus size={20} />
-                            <p>Add picture</p>
+                            <p className="max-[600px]:hidden">Add picture</p>
                         </div>
                     </Link>
                     <Link to={"/saved"}>
-                        <div className={location.pathname === "/saved" ? "py-3 px-5 flex items-center gap-3 text-[16px] text-white  border-l-3 border-indigo-600 bg-slate-900 max-[950px]:border-b-3 max-[950px]:border-l-0" : "py-3 px-5 border-l-3 border-slate-800 flex items-center gap-3 text-[16px] text-white hover:bg-slate-900 hover:border-indigo-600 cursor-pointer max-[950px]:border-b-3 max-[950px]:border-l-0"}>
+                        <div className={location.pathname === "/saved" ? "py-3 px-5 flex items-center gap-3 text-[16px] text-white  border-l-3 border-indigo-600 bg-slate-900 max-[950px]:border-l-0" : "py-3 px-5 border-l-3 border-slate-800 flex items-center gap-3 text-[16px] text-white hover:bg-slate-900 hover:border-indigo-600 cursor-pointer max-[950px]:border-l-0"}>
                             <Bookmark size={20} />
-                            <p>saved picture</p>
+                            <p className="max-[600px]:hidden">saved picture</p>
                         </div>
                     </Link>
                     <Link to={"/profile"}>
-                        <div className={location.pathname === "/profile" ? "py-3 px-5 flex items-center gap-3 text-[16px] text-white  border-l-3 border-indigo-600 bg-slate-900 max-[950px]:border-b-3 max-[950px]:border-l-0" : "py-3 px-5 border-l-3 border-slate-800 flex items-center gap-3 text-[16px] text-white hover:bg-slate-900 hover:border-indigo-600 cursor-pointer max-[950px]:border-b-3 max-[950px]:border-l-0"}>
+                        <div className={location.pathname === "/profile" ? "py-3 px-5 flex items-center gap-3 text-[16px] text-white  border-l-3 border-indigo-600 bg-slate-900 max-[950px]:border-l-0" : "py-3 px-5 border-l-3 border-slate-800 flex items-center gap-3 text-[16px] text-white hover:bg-slate-900 hover:border-indigo-600 cursor-pointer max-[950px]:border-l-0"}>
                             <CircleUser size={20} />
-                            <p>profile</p>
+                            <p className="max-[600px]:hidden">profile</p>
                         </div>
                     </Link>
                 </div>
