@@ -17,8 +17,8 @@ export default function Header({ setOpen, open }) {
             <div onClick={handleOpen} className="p-2 border border-gray-500 rounded-lg cursor-pointer hover:bg-gray-200 max-[950px]:hidden">
                 <Menu size={22} className="text-gray-800" />
             </div>
-            <Link to={"/"}>
-                <img className="w-[40px] h-[40px] min-[950px]:hidden flex-shrink-0" src={logo} alt="logo" />
+            <Link to={"/"} className="min-[950px]:hidden">
+                <img className="w-[40px] h-[40px]  flex-shrink-0" src={logo} alt="logo" />
             </Link>
             {/* search */}
             <label className="flex items-center justify-between border border-gray-500 rounded-lg flex-1 px-2 gap-2">

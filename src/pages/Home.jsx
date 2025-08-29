@@ -19,9 +19,9 @@ export default function Home() {
             </div>
             {/* posts */}
             <div className="max-w-full  columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6">
-                {posts.map((post, i) => {
+                {posts.map((post) => {
                     return (
-                        <Link key={i.id} to={`/product/${post.id}`}>
+                        <Link key={post.id} to={`/img/${post.id}`}>
                             <div className="mb-5 cursor-pointer">
                                 <img className="rounded-xl" src={post.Image} alt="img" />
                             </div>
