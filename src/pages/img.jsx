@@ -9,10 +9,14 @@ import { Share } from "lucide-react";
 import { Ellipsis } from "lucide-react";
 import { Smile } from "lucide-react";
 import { SendHorizontal } from "lucide-react";
+import { Expand } from "lucide-react";
+import { useState } from "react";
+import { Shrink } from "lucide-react";
 
 export default function img() {
     const { id } = useParams()
     const [product] = posts.filter(i => i.id === id);
+    const [selectedImage, setSelectedImage] = useState(null);
     return (
         <div className="w-full px-4 bg-[#f2f2f2] flex justify-start items-start gap-3">
             <Link to={'/'}>
@@ -35,8 +39,11 @@ export default function img() {
                         Save
                     </button>
                 </div>
-                <div className="w-full px-4 h-140 rounded-xl flex items-center justify-center bg-gray-800 py-2">
-                    <img className="h-full rounded-xl" src={product.Image} alt="" />
+                <div className="w-full px-4 h-140 rounded-xl flex items-center justify-center bg-gray-800 py-2 relative">
+                    <img className="h-full rounded-xl" src={product.Image} alt="img" />
+                    <div onClick={() => setSelectedImage(product.Image)} className="p-2 bg-gray-200 rounded-xl cursor-pointer absolute right-5 bottom-5">
+                        <Expand className="text-gray-700" size={25} />
+                    </div>
                 </div>
                 <Link to={'/profile'} className="py-2 flex items-center justify-start gap-2 cursor-pointer">
                     <img className="w-8 h-8 rounded-full object-cover cursor-pointer" src={product.Image} alt="" />
@@ -50,6 +57,17 @@ export default function img() {
                     </div>
                 </div>
             </div>
+            {selectedImage && (
+                <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+                    <div className="relative max-w-4xl w-full">
+                        <button className="absolute top-2 right-0 p-2 bg-gray-200 rounded-xl cursor-pointer" onClick={() => setSelectedImage(null)}>
+                            <Shrink className="text-gray-700" size={25} />
+                        </button>
+                        <img src={selectedImage} alt="img" className="rounded-xl max-h-[90vh] mx-auto"
+                        />
+                    </div>
+                </div>
+            )}
         </div>
     )
 };
