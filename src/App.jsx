@@ -10,6 +10,7 @@ import Profile from './pages/Profil'
 import MainLayout from './layout/MainLayout';
 import Login from './pages/Login'
 import SingUp from './pages/SingUp';
+import Product from './pages/Product'
 
 function App() {
   const router = createBrowserRouter(
@@ -20,6 +21,7 @@ function App() {
           <Route path='/add' element={<AddPicture />} />
           <Route path='/saved' element={<SavedPicture />} />
           <Route path='/profile' element={<Profile />} />
+          <Route path='/product/:id' element={<Product />} />
         </Route>
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SingUp />} />

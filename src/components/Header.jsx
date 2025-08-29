@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // lucide icons
 import { Menu } from "lucide-react"
 import { Search } from "lucide-react"
-import logo from "/public/logo-title.svg"
+import logo from "/logo-title.svg"
 
 export default function Header({ setOpen, open }) {
 
