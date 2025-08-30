@@ -78,7 +78,7 @@ export default function img() {
             <div className="w-full  columns-2 sm:columns-1 md:columns-2 lg:columns-3 xl:columns-3">
                 {posts.map((post) => {
                     return (
-                        <Link key={post.id} to={`/img/${post.id}`} reloadDocument>
+                        <Link key={post.id} to={`/img/${post.id}`}>
                             <div className="mb-5 cursor-pointer">
                                 <img className="rounded-xl" src={post.Image} alt="img" />
                             </div>
