@@ -20,11 +20,11 @@ export default function Profile() {
                             <p class="font-bold text-xl">10</p>
                             <p class="text-lg text-gray-500">Posts</p>
                         </div>
-                        <div>
+                        <div className='cursor-pointer'>
                             <p class="font-bold text-xl">10</p>
                             <p class="text-lg text-gray-500">Followers</p>
                         </div>
-                        <div>
+                        <div className='cursor-pointer'>
                             <p class="font-bold text-xl">10</p>
                             <p class="text-lg text-gray-500">Following</p>
                         </div>
