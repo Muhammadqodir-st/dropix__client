@@ -14,6 +14,7 @@ import { X } from 'lucide-react';
 
 export default function Profile() {
     const [following, setFollowing] = useState(false);
+    const [followers, setFollowers] = useState(false)
 
     return (
         <div className="w-full px-4 ">
@@ -32,7 +33,7 @@ export default function Profile() {
                             <p className="font-bold text-xl">10</p>
                             <p className="text-lg text-gray-500">Posts</p>
                         </div>
-                        <div className='cursor-pointer'>
+                        <div onClick={() => setFollowers(true)} className='cursor-pointer'>
                             <p className="font-bold text-xl">10</p>
                             <p className="text-lg text-gray-500">Followers</p>
                         </div>
@@ -71,6 +72,29 @@ export default function Profile() {
                                 </div>
                             </div>
                             {/* following user */}
+                            <div className='w-full max-h-80 overflow-hidden overflow-y-auto  p-3 flex flex-col gap-3'>
+                                <div className='flex items-center justify-between'>
+                                    <div className='flex items-center gap-2'>
+                                        <img className='w-14 rounded-full' src={user} alt="user" />
+                                        <p className='text-lg text-white'>Muhammadqodir</p>
+                                    </div>
+                                    <button className="py-2 px-10 rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 cursor-pointer">Follow</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )};
+                {/* followers */}
+                {followers && (
+                    <div className='w-full h-full fixed top-0 left-0 bg-black/80 flex items-center justify-center'>
+                        <div className='w-140 h-100 rounded-xl bg-stone-900'>
+                            <div className='flex items-center justify-center py-2 border-b border-gray-100 relative'>
+                                <p className='text-lg text-white'>followers</p>
+                                <div onClick={() => setFollowers(false)} className='absolute right-2 text-white cursor-pointer'>
+                                    <X size={24} />
+                                </div>
+                            </div>
+                            {/* followers user */}
                             <div className='w-full max-h-80 overflow-hidden overflow-y-auto  p-3 flex flex-col gap-3'>
                                 <div className='flex items-center justify-between'>
                                     <div className='flex items-center gap-2'>
