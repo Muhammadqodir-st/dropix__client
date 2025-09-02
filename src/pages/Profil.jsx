@@ -44,7 +44,7 @@ export default function Profile() {
                         </div>
                     </div>
                     <div className="mt-4 flex items-center justify-center gap-3">
-                        <Link to={'/editProfile'}>
+                        <Link to={'/profile/editProfile'}>
                             <button className="py-2 px-10 rounded-lg border cursor-pointer">edit profile</button>
                         </Link>
                         <button className="py-2 px-10 rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 cursor-pointer">share profile</button>

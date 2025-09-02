@@ -64,7 +64,7 @@ export default function img() {
             </div>
             {/* post modal */}
             {selectedImage && (
-                <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+                <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-100">
                     <div className="relative max-w-4xl w-full">
                         <button className="absolute top-2 right-0 p-2 bg-gray-200 rounded-xl cursor-pointer" onClick={() => setSelectedImage(null)}>
                             <Shrink className="text-gray-700" size={25} />

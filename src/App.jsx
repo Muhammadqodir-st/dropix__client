@@ -24,7 +24,7 @@ function App() {
           <Route path='/saved' element={<SavedPicture />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/img/:id' element={< Img />} />
-          <Route path='/editProfile' element={<EditProfile />} />
+          <Route path='/profile/editProfile' element={<EditProfile />} />
         </Route>
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SingUp />} />
