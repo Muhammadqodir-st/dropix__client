@@ -63,7 +63,7 @@ export default function Profile() {
                 </div>
                 {/* following */}
                 {following && (
-                    <div className='w-full h-full fixed top-0 left-0 bg-black/80 flex items-center justify-center'>
+                    <div className='w-full h-full fixed top-0 left-0 bg-black/80 flex items-center justify-center z-100'>
                         <div className='w-140 h-100 rounded-xl bg-stone-900'>
                             <div className='flex items-center justify-center py-2 border-b border-gray-100 relative'>
                                 <p className='text-lg text-white'>following</p>
@@ -86,7 +86,7 @@ export default function Profile() {
                 )};
                 {/* followers */}
                 {followers && (
-                    <div className='w-full h-full fixed top-0 left-0 bg-black/80 flex items-center justify-center'>
+                    <div className='w-full h-full fixed top-0 left-0 bg-black/80 flex items-center justify-center z-100'>
                         <div className='w-140 h-100 rounded-xl bg-stone-900'>
                             <div className='flex items-center justify-center py-2 border-b border-gray-100 relative'>
                                 <p className='text-lg text-white'>followers</p>
