@@ -6,6 +6,7 @@ import posts from '../data/data';
 
 // react router dom
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // lucide icon 
 import { X } from 'lucide-react';
@@ -43,8 +44,10 @@ export default function Profile() {
                         </div>
                     </div>
                     <div className="mt-4 flex items-center justify-center gap-3">
-                        <button className="py-2 px-10 rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 cursor-pointer">Follow</button>
-                        <button className="py-2 px-10 rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 cursor-pointer">Follow</button>
+                        <Link to={'/editProfile'}>
+                            <button className="py-2 px-10 rounded-lg border cursor-pointer">edit profile</button>
+                        </Link>
+                        <button className="py-2 px-10 rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 cursor-pointer">share profile</button>
                     </div>
                 </div>
                 {/* all posts */}
