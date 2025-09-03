@@ -13,9 +13,9 @@ export default function MainLayout() {
     const [open, setOpen] = useState(true);
 
     return (
-        <div className="flex">
+        <div className="flex bg-[#f2f2f2]">
             {open && <Sidebar />}
-            <div className='w-full h-full bg-[#f2f2f2]'>
+            <div className='w-full h-full'>
                 <Header setOpen={setOpen} open={open} />
                 <Outlet />
             </div>

@@ -28,7 +28,7 @@ export default function EditProfile() {
     }
 
     return (
-        <div className="w-full h-screen px-4 bg-[#f2f2f2] flex flex-col gap-2">
+        <div className="w-full h- px-4 bg-[#f2f2f2] flex flex-col gap-2">
             {/* banner and avatar */}
             <div className="bg-gradient-to-r from-indigo-600 to-pink-500 h-40 rounded-lg relative flex items-center justify-center">
                 {/* banner */}
@@ -49,9 +49,17 @@ export default function EditProfile() {
                 </div>
             </div>
             <h2 className="mt-14 text-3xl font-bold text-center">Edit profile</h2>
-            {/*  */}
-            <div className="w-100 mx-auto shadow-xl">
-               input data
+            {/* name and username edit */}
+            <div className="w-120 mx-auto p-3 rounded-lg shadow-2xl flex flex-col gap-4">
+                <label className="flex flex-col">
+                    <p className="text-md text-gray-800 cursor-pointer">Name</p>
+                    <input className="w-full p-2 border border-gray-500 rounded-lg outline-indigo-700" type="text" placeholder="Muhammadqodir" />
+                </label>
+                <label className="flex flex-col">
+                    <p className="text-md text-gray-800 cursor-pointer">Username</p>
+                    <input className="w-full p-2 border border-gray-500 rounded-lg outline-indigo-700" type="text" placeholder="#username" />
+                </label>
+                <button className="w-full py-2 bg-indigo-700 rounded-lg text-white cursor-pointer hover:bg-indigo-600">Save changes</button>
             </div>
         </div>
     )
