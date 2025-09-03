@@ -50,7 +50,7 @@ export default function EditProfile() {
             </div>
             <h2 className="mt-14 text-3xl font-bold text-center">Edit profile</h2>
             {/* name and username edit */}
-            <div className="w-120 mx-auto p-3 rounded-lg shadow-2xl flex flex-col gap-4">
+            <div className="w-120 mx-auto p-3 rounded-lg shadow-2xl flex flex-col gap-4 max-[550px]:w-[90%]">
                 <label className="flex flex-col">
                     <p className="text-md text-gray-800 cursor-pointer">Name</p>
                     <input className="w-full p-2 border border-gray-500 rounded-lg outline-indigo-700" type="text" placeholder="Muhammadqodir" />

@@ -43,15 +43,15 @@ export default function Profile() {
                             <p className="text-lg text-gray-500">Following</p>
                         </div>
                     </div>
-                    <div className="mt-4 flex items-center justify-center gap-3">
+                    <div className="mt-4 flex items-center justify-center gap-3 max-[385px]:justify-between">
                         <Link to={'/profile/editProfile'}>
-                            <button className="py-2 px-10 rounded-lg border cursor-pointer">edit profile</button>
+                            <button className="py-2 px-10 rounded-lg border cursor-pointer max-[385px]:px-8 max-[350px]:px-5">edit profile</button>
                         </Link>
-                        <button className="py-2 px-10 rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 cursor-pointer">share profile</button>
+                        <button className="py-2 px-10 rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 cursor-pointer max-[385px]:px-8 max-[350px]:px-5">share profile</button>
                     </div>
                 </div>
                 {/* all posts */}
-                <div className="mt-8 px-6">
+                <div className="mt-8">
                     <h3 className="text-xl font-semibold mb-4">Posts</h3>
                     {/* posts */}
                     <div className="w-full  columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6">
