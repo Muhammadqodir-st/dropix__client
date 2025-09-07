@@ -27,10 +27,10 @@ export default function Header({ setOpen, open }) {
             </label>
             {/* sign btns */}
             <div className="flex items-center jusctify-center gap-3">
-                <Link to={"/login"} className="h-full">
+                <Link to={"auth/login"} className="h-full">
                     <button className="px-7 h-full bg-indigo-700 text-white rounded-lg cursor-pointer hover:bg-indigo-600">login</button>
                 </Link>
-                <Link to={"/signup"} className="h-full max-[580px]:hidden">
+                <Link to={"auth/signup"} className="h-full max-[580px]:hidden">
                     <button className="px-7 h-full bg-indigo-700 text-white rounded-lg cursor-pointer hover:bg-indigo-600 max-[580px]:hidden">sign up</button>
                 </Link>
             </div>

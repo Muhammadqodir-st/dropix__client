@@ -12,12 +12,14 @@ import Login from './pages/Login'
 import SingUp from './pages/SingUp';
 import Img from './pages/img'
 import EditProfile from './pages/EditProfile';
+import AuthLayout from './layout/AutLayout';
 
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route>
+        {/* main layout */}
         <Route path='/' element={<MainLayout />}>
           <Route index={true} element={<Home />} />
           <Route path='/add' element={<AddPicture />} />
@@ -26,8 +28,12 @@ function App() {
           <Route path='/img/:id' element={< Img />} />
           <Route path='/profile/editProfile' element={<EditProfile />} />
         </Route>
-        <Route path='/login' element={<Login />} />
-        <Route path='/signup' element={<SingUp />} />
+        
+        {/* auht layout */}
+        <Route path='/auth' element={<AuthLayout />}>
+          <Route index={true} path='login' element={<Login />} />
+          <Route path='signup' element={<SingUp />} />
+        </Route>
       </Route>
     )
   )
