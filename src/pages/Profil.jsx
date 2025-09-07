@@ -57,7 +57,7 @@ export default function Profile() {
                     <div className="w-full  columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6">
                         {posts.map((post, i) => {
                             return (
-                                <div className="mb-5 cursor-pointer">
+                                <div key={i} className="mb-5 cursor-pointer">
                                     <img className="rounded-xl" src={post.Image} alt="img" />
                                 </div>
                             )
