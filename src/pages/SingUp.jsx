@@ -12,11 +12,11 @@ import { ChevronLeft } from 'lucide-react'
 export default function SingUp() {
     return (
         <div className='w-full h-screen flex items-center justify-center bg-[#f2f2f2]'>
-            <div className='w-280 h-165 bg-white rounded-2xl overflow-hidden flex items-center gap-3 max-[1150px]:w-[90%] max-[750px]:h-auto max-[750px]:py-10'>
+            <div className='w-280 h-165 bg-white rounded-2xl overflow-hidden flex items-center gap-3 max-[1150px]:w-[90%] max-[750px]:h-auto max-[750px]:py-10 max-[370px]:w-full max-[370px]:rounded-none'>
                 <div className='w-[50%] h-full relative max-[750px]:hidden'>
                     <img className='w-full h-full object-cover' src={bg} alt="" />
                     <Link to={'/'}>
-                        <div className='p-2 absolute bg-gray-100 z-100 top-2 left-2 rounded-lg cursor-pointer'>
+                        <div className='p-2 absolute bg-gray-100 z-100 top-3 left-2 rounded-lg cursor-pointer'>
                             <ChevronLeft className='text-gray-700' size={25} />
                         </div>
                     </Link>
