@@ -27,6 +27,8 @@ export default function img() {
             </Link>
             <div className="w-full flex flex-col gap-3">
                 <div className="w-full max-[950px]:w-full max-[600px]:flex-1 border border-gray-500 rounded-xl overflow-hidden py-3 px-4 flex flex-col gap-3 flex-shrink-0 max-[400px]:border-0 max-[400px]:p-0">
+
+
                     {/* post top */}
                     <div className=" flex items-center justify-between gap-1 max-[600px]:order-2">
                         <div className="flex items-center justify-center gap-5">
@@ -42,6 +44,8 @@ export default function img() {
                             Save
                         </button>
                     </div>
+
+
                     {/* post image */}
                     <div className="w-full px-4 h-140 rounded-xl flex items-center justify-center bg-gray-800 py-2 relative max-[600px]:p-0 max-[600px]:h-auto">
                         <img className="max-[600px]:w-full h-full rounded-xl" src={product.Image} alt="img" />
@@ -49,11 +53,15 @@ export default function img() {
                             <Expand className="text-gray-700" size={25} />
                         </div>
                     </div>
+
+
                     {/* post auth */}
                     <Link to={'/profile'} className="py-2 flex items-center justify-start gap-2 cursor-pointer">
                         <img className="w-8 h-8 rounded-full object-cover cursor-pointer" src={product.Image} alt="" />
                         <p className="text-gray-600 text-md">Muhammadqodir</p>
                     </Link>
+
+
                     {/* post comment */}
                     <div className="w-full flex items-center justify-between gap-3 border border-gray-500 rounded-xl p-2 max-[600px]:hidden">
                         <input className="w-full outline-0 text-gray-700" type="text" placeholder="add a comment" />
@@ -63,6 +71,8 @@ export default function img() {
                         </div>
                     </div>
                 </div>
+
+
                 {/* post modal */}
                 {selectedImage && (
                     <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-100">
@@ -75,6 +85,8 @@ export default function img() {
                         </div>
                     </div>
                 )}
+
+
                 {/* posts */}
                 <div className="w-full  columns-2 sm:columns-1 md:columns-2 lg:columns-3 xl:columns-3">
                     {posts.map((post) => {
@@ -88,6 +100,8 @@ export default function img() {
                     })};
                 </div>
             </div>
+
+            
             {/* posts */}
             <div className="w-full  columns-2 sm:columns-1 md:columns-2 lg:columns-3 xl:columns-3">
                 {posts.map((post) => {
