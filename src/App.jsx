@@ -13,7 +13,7 @@ import SingUp from './pages/SingUp';
 import Img from './pages/img'
 import EditProfile from './pages/EditProfile';
 import AuthLayout from './layout/AutLayout';
-
+import MainProvider from './context/MainContext';
 
 function App() {
   const router = createBrowserRouter(
@@ -28,7 +28,7 @@ function App() {
           <Route path='/img/:id' element={< Img />} />
           <Route path='/profile/editProfile' element={<EditProfile />} />
         </Route>
-        
+
         {/* auht layout */}
         <Route path='/auth' element={<AuthLayout />}>
           <Route index={true} path='login' element={<Login />} />
@@ -40,7 +40,9 @@ function App() {
 
   return (
     <>
-      <RouterProvider router={router} />
+      <MainProvider>
+        <RouterProvider router={router} />
+      </MainProvider>
     </>
   )
 }
