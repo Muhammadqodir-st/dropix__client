@@ -59,7 +59,7 @@ export default function EditProfile() {
                     <p className="text-md text-gray-800 cursor-pointer">Username</p>
                     <input className="w-full p-2 border border-gray-500 rounded-lg outline-indigo-700" type="text" placeholder="#username" />
                 </label>
-                <button className="w-full py-2 bg-indigo-700 rounded-lg text-white cursor-pointer hover:bg-indigo-600">Save changes</button>
+                <button className="w-full py-2 bg-indigo-600 rounded-lg text-white cursor-pointer hover:bg-indigo-500">Save changes</button>
             </div>
         </div>
     )
