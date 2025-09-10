@@ -1,6 +1,8 @@
 // react compononts
 import { Link, useParams } from "react-router-dom"
 import posts from "../data/data"
+
+
 // lucide compononts
 import { ArrowLeft } from "lucide-react";
 import { Heart } from "lucide-react";
@@ -10,13 +12,31 @@ import { Ellipsis } from "lucide-react";
 import { Smile } from "lucide-react";
 import { SendHorizontal } from "lucide-react";
 import { Expand } from "lucide-react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Shrink } from "lucide-react";
 
+// context
+import { MainContext } from "../context/MainContext";
+
+
+
 export default function img() {
+
+    // useParams
     const { id } = useParams()
     const [product] = posts.filter(i => i.id === id);
+
+    // image module
     const [selectedImage, setSelectedImage] = useState(null);
+
+    // useContext
+    const { saveArr, setSaveArr } = useContext(MainContext);
+
+    // save image function
+    const handleSave = (i) => {
+        setSaveArr((prev) => [...prev, i]);
+    }
+
     return (
         <div className="w-full px-4 bg-[#f2f2f2] flex justify-start items-start gap-3 max-[640px]:flex-wrap max-[640px]:gap-5">
             {/* close btn */}
@@ -40,7 +60,7 @@ export default function img() {
                             <Share className="w-8 cursor-pointer text-gray-700" size={26} />
                             <Ellipsis className="w-8 cursor-pointer text-gray-700" size={26} />
                         </div>
-                        <button className="py-2 px-5 rounded-full bg-red-600 text-white cursor-pointer">
+                        <button onClick={() => handleSave(product)} className="py-2 px-5 rounded-full bg-red-600 text-white cursor-pointer">
                             Save
                         </button>
                     </div>
@@ -101,7 +121,7 @@ export default function img() {
                 </div>
             </div>
 
-            
+
             {/* posts */}
             <div className="w-full  columns-2 sm:columns-1 md:columns-2 lg:columns-3 xl:columns-3">
                 {posts.map((post) => {
