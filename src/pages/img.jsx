@@ -1,5 +1,7 @@
 // react compononts
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams, useNavigate } from "react-router-dom"
+
+// data
 import posts from "../data/data"
 
 
@@ -35,16 +37,19 @@ export default function img() {
     // save image function
     const handleSave = (i) => {
         setSaveArr((prev) => [...prev, i]);
-    }
+    };
+
+    // useNavigatsion 
+    const navigate = useNavigate();
 
     return (
         <div className="w-full px-4 bg-[#f2f2f2] flex justify-start items-start gap-3 max-[640px]:flex-wrap max-[640px]:gap-5">
             {/* close btn */}
-            <Link to={'/'} className="sticky left-0 top-5 max-[600px]:fixed z-10">
+            <div onClick={() => navigate(-1)} className="sticky left-0 top-5 max-[600px]:fixed z-10">
                 <div className="p-3 hover:bg-gray-200 rounded-xl cursor-pointer max-[600px]:bg-gray-200">
                     <ArrowLeft className="text-gray-600" size={24} />
                 </div>
-            </Link>
+            </div>
             <div className="w-full flex flex-col gap-3">
                 <div className="w-full max-[950px]:w-full max-[600px]:flex-1 border border-gray-500 rounded-xl overflow-hidden py-3 px-4 flex flex-col gap-3 flex-shrink-0 max-[400px]:border-0 max-[400px]:p-0">
 
