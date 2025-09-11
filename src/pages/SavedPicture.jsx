@@ -12,8 +12,6 @@ export default function SavedPicture() {
     // useContext
     const { saveArr } = useContext(MainContext);
 
-    console.log(saveArr);
-
 
     return (
         <div className="w-full h-200 px-4">
