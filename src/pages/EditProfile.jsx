@@ -7,7 +7,9 @@ import { useState } from "react"
 // defualt user 
 import user from '../assets/user.png';
 
+
 export default function EditProfile() {
+    // name and userName
     const [banner, setBanner] = useState(null)
     const [avatar, setAvatar] = useState(null)
 
@@ -28,7 +30,7 @@ export default function EditProfile() {
     }
 
     return (
-        <div className="w-full h- px-4 bg-[#f2f2f2] flex flex-col gap-2">
+        <form className="w-full h- px-4 bg-[#f2f2f2] flex flex-col gap-2">
             {/* banner and avatar */}
             <div className="bg-gradient-to-r from-indigo-600 to-pink-500 h-40 rounded-lg relative flex items-center justify-center">
                 {/* banner */}
@@ -61,6 +63,6 @@ export default function EditProfile() {
                 </label>
                 <button className="w-full py-2 bg-indigo-600 rounded-lg text-white cursor-pointer hover:bg-indigo-500">Save changes</button>
             </div>
-        </div>
+        </form>
     )
 };
