@@ -15,6 +15,11 @@ import EditProfile from './pages/EditProfile';
 import AuthLayout from './layout/AutLayout';
 import MainProvider from './context/MainContext';
 
+// redux
+import { Provider } from 'react-redux';
+import store from './store/store'
+
+
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -39,11 +44,11 @@ function App() {
   )
 
   return (
-    <>
-      <MainProvider>
-        <RouterProvider router={router} />
-      </MainProvider>
-    </>
+      <Provider store={store}>
+        <MainProvider>
+          <RouterProvider router={router} />
+        </MainProvider>
+      </Provider>
   )
 }
 
