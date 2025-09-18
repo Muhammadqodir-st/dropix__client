@@ -42,6 +42,20 @@ export default function img() {
     // useNavigatsion 
     const navigate = useNavigate();
 
+    // like
+    const [likes, setLikes] = useState(0)
+    const [liked, setLiked] = useState(false);
+
+    const handleLike = () => {
+        if (likes) {
+            setLikes(likes - 1)
+        } else {
+            setLikes(likes + 1)
+        }
+        setLiked(!liked)
+    }
+    
+
     return (
         <div className="w-full px-4 bg-[#f2f2f2] flex justify-start items-start gap-3 max-[640px]:flex-wrap max-[640px]:gap-5">
             {/* close btn */}
@@ -58,8 +72,8 @@ export default function img() {
                     <div className=" flex items-center justify-between gap-1 max-[600px]:order-2">
                         <div className="flex items-center justify-center gap-5">
                             <div className="flex items-center justify-center gap-1">
-                                <Heart className="w-8 cursor-pointer text-gray-700" size={26} />
-                                <p className="text-lg text-gray-700">0</p>
+                                <Heart onClick={handleLike} className={`w-8 cursor-pointer ${liked ? 'text-red-500 fill-red-500' : 'text-gray-700'}`} size={26} />
+                                <p className="text-lg text-gray-700">{likes}</p>
                             </div>
                             <MessageCircle className="w-8 cursor-pointer text-gray-700" size={26} />
                             <Share className="w-8 cursor-pointer text-gray-700" size={26} />

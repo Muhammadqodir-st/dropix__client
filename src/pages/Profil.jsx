@@ -75,10 +75,10 @@ export default function Profile() {
                                 </div>
                             </div>
                             {/* following user */}
-                            <div className='w-full max-h-80 overflow-hidden overflow-y-auto  p-3 flex flex-col gap-3'>
+                            <div className='w-full max-h-80 overflow-hidden overflow-y-auto  p-4 flex flex-col gap-3'>
                                 <div className='flex items-center justify-between'>
                                     <div className='flex items-center gap-2'>
-                                        <img className='w-14 rounded-full' src={user} alt="user" />
+                                        <img className='w-13 rounded-full' src={user} alt="user" />
                                         <p className='text-lg text-white'>Muhammadqodir</p>
                                     </div>
                                     <button className="py-2 px-10 rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 cursor-pointer">Follow</button>
@@ -98,10 +98,10 @@ export default function Profile() {
                                 </div>
                             </div>
                             {/* followers user */}
-                            <div className='w-full max-h-80 overflow-hidden overflow-y-auto  p-3 flex flex-col gap-3'>
+                            <div className='w-full max-h-80 overflow-hidden overflow-y-auto  p-4 flex flex-col gap-3'>
                                 <div className='flex items-center justify-between'>
                                     <div className='flex items-center gap-2'>
-                                        <img className='w-14 rounded-full' src={user} alt="user" />
+                                        <img className='w-13 rounded-full' src={user} alt="user" />
                                         <p className='text-lg text-white'>Muhammadqodir</p>
                                     </div>
                                     <button className="py-2 px-10 rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 cursor-pointer">Follow</button>
