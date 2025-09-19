@@ -54,7 +54,7 @@ export default function img() {
         }
         setLiked(!liked)
     }
-    
+
 
     return (
         <div className="w-full px-4 bg-[#f2f2f2] flex justify-start items-start gap-3 max-[640px]:flex-wrap max-[640px]:gap-5">
@@ -75,7 +75,9 @@ export default function img() {
                                 <Heart onClick={handleLike} className={`w-8 cursor-pointer ${liked ? 'text-red-500 fill-red-500' : 'text-gray-700'}`} size={26} />
                                 <p className="text-lg text-gray-700">{likes}</p>
                             </div>
-                            <MessageCircle className="w-8 cursor-pointer text-gray-700" size={26} />
+                            <label htmlFor="comment">
+                                <MessageCircle className="w-8 cursor-pointer text-gray-700" size={26} />
+                            </label>
                             <Share className="w-8 cursor-pointer text-gray-700" size={26} />
                             <Ellipsis className="w-8 cursor-pointer text-gray-700" size={26} />
                         </div>
@@ -103,7 +105,7 @@ export default function img() {
 
                     {/* post comment */}
                     <div className="w-full flex items-center justify-between gap-3 border border-gray-500 rounded-xl p-2 max-[600px]:hidden">
-                        <input className="w-full outline-0 text-gray-700" type="text" placeholder="add a comment" />
+                        <input id="comment" className="w-full outline-0 text-gray-700" type="text" placeholder="add a comment" />
                         <div className="flex items-center justify-center gap-3">
                             <Smile className="cursor-pointer text-gray-700" size={25} />
                             <SendHorizontal className="cursor-pointer text-gray-700" size={25} />
