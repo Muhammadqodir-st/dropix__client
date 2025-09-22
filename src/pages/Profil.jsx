@@ -55,13 +55,13 @@ export default function Profile() {
                     <h3 className="text-xl font-semibold mb-4">Posts</h3>
                     {/* posts */}
                     <div className="w-full  columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6">
-                        {posts.map((post, i) => {
+                        {/* {posts.map((post, i) => {
                             return (
                                 <div key={i} className="mb-5 cursor-pointer">
                                     <img className="rounded-xl" src={post.Image} alt="img" />
                                 </div>
                             )
-                        })};
+                        })} */}
                     </div>
                 </div>
                 {/* following */}
@@ -86,7 +86,7 @@ export default function Profile() {
                             </div>
                         </div>
                     </div>
-                )};
+                )}
                 {/* followers */}
                 {followers && (
                     <div className='w-full h-full fixed top-0 left-0 bg-black/80 flex items-center justify-center z-100'>
