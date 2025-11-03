@@ -1,6 +1,0 @@
-<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Doira -->
-  <circle cx="25" cy="25" r="24" fill="#6600dc"/>
-  <!-- Katta Galочка -->
-  <path d="M12 25L22 35L38 15" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
