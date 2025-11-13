@@ -1,7 +1,15 @@
 // next
 import Image from "next/image"
 import Link from "next/link"
+import { Metadata } from "next"
+
+// image and icon
 import logo from '../favicon.svg'
+
+// meda data
+const metaData: Metadata = {
+    title: "Dropix | Auth"
+}
 
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
