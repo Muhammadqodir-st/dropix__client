@@ -13,6 +13,8 @@ import { useForm } from '@tanstack/react-form';
 // toast 
 import toast from "react-hot-toast";
 import { registerUser } from "@/api/services/auth.services";
+import { useMutation } from "@tanstack/react-query";
+import ButtonLoader from "@/components/loaders/ButtonLoader";
 
 interface IForm {
     name: string;
@@ -21,28 +23,24 @@ interface IForm {
 
 export default function Register() {
 
+    const registerMutation = useMutation({
+        mutationFn: async ({ name, email }: IForm) => {
+            return await registerUser({ name, email } as IForm);
+        },
+        onSuccess: (res: { message: string }) => {
+            console.log(res)
+            toast.success(res.message);
+        },
+    });
+
     const form = useForm({
         defaultValues: {
             name: '',
             email: ''
         } as IForm,
         onSubmit: async ({ value }) => {
-            if (!value.name) {
-                return toast.error('Please enter your name')
-            }
-
-            if (!value.email) {
-                return toast.error('Please enter your email')
-            }
-
-            try {
-                const res: { statusCode: number, message: string, success: boolean } = await registerUser({ name: value.name, email: value.email })
-                toast.success(res.message)
-                form.reset()
-            } catch (error: any) {
-                toast.error(error.message || 'Error!')
-                console.log(error);
-            }
+            await registerMutation.mutateAsync(value);
+            form.reset()
         },
     });
 
@@ -100,9 +98,9 @@ export default function Register() {
                 <p className="text-sm text-gray-600 font-semibold">Have an account? <Link className="underline text-white" href={'login'}>Login</Link></p>
 
                 {/* submit btn */}
-                <button type="submit" className="p-3 bg-blue-700 rounded-lg font-semibold cursor-pointer hover:bg-blue-600">Send Link to Join</button>
+                <button disabled={registerMutation.isPending} type="submit" className={`h-10 ${registerMutation.isPending ? 'bg-blue-950' : 'bg-blue-700 hover:bg-blue-600'} rounded-lg font-semibold cursor-pointer flex items-center justify-center`}>{registerMutation.isPending ? <ButtonLoader /> : 'register'}</button>
             </form>
 
-        </div>
+        </div>              
     )
 }
