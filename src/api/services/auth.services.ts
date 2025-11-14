@@ -13,7 +13,7 @@ export function registerUser(data: { name: string, email: string }) {
 
 // login
 export function loginUser(data: { email: string }) {
-    return fetcher('/auth/register', {
+    return fetcher('/auth/login', {
         method: "POST",
         body: JSON.stringify(data),
         headers: {

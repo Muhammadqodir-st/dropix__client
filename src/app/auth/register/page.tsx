@@ -9,13 +9,18 @@ import Link from "next/link";
 
 // tanstack 
 import { useForm } from '@tanstack/react-form';
+import { useMutation } from "@tanstack/react-query";
 
 // toast 
 import toast from "react-hot-toast";
+
+// api service
 import { registerUser } from "@/api/services/auth.services";
-import { useMutation } from "@tanstack/react-query";
+
+// loader
 import ButtonLoader from "@/components/loaders/ButtonLoader";
 
+// form interface
 interface IForm {
     name: string;
     email: string;
@@ -23,16 +28,20 @@ interface IForm {
 
 export default function Register() {
 
+    // register mutation
     const registerMutation = useMutation({
         mutationFn: async ({ name, email }: IForm) => {
             return await registerUser({ name, email } as IForm);
         },
         onSuccess: (res: { message: string }) => {
-            console.log(res)
             toast.success(res.message);
         },
+        onError: (err: { message: string }) => {
+            toast.error(err.message)
+        }
     });
 
+    // use form
     const form = useForm({
         defaultValues: {
             name: '',
@@ -66,7 +75,13 @@ export default function Register() {
 
             <form onSubmit={(e) => { e.preventDefault(); form.handleSubmit() }} className="flex flex-col gap-4">
                 {/* name input */}
-                <form.Field name="name">
+                <form.Field name="name" validators={{
+                    onChange: ({ value }) => {
+                        if (!value) {
+                            return toast.error('Please enter name')
+                        }
+                    }
+                }}>
                     {(field) => (
                         <label className="flex flex-col gap-1" htmlFor="nameInput">
                             <p className="text-gray-600">Your name</p>
@@ -101,6 +116,6 @@ export default function Register() {
                 <button disabled={registerMutation.isPending} type="submit" className={`h-10 ${registerMutation.isPending ? 'bg-blue-950' : 'bg-blue-700 hover:bg-blue-600'} rounded-lg font-semibold cursor-pointer flex items-center justify-center`}>{registerMutation.isPending ? <ButtonLoader /> : 'register'}</button>
             </form>
 
-        </div>              
+        </div>
     )
 }
