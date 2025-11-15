@@ -27,25 +27,25 @@ export default function Verify() {
         enabled: !!token
     });
 
-    
+
     useEffect(() => {
         if (data?.success) {
             localStorage.setItem("token", data?.token);
             toast.success(data?.message);
-            window.location.reload();
             router.replace('/');
+            return window.location.reload();
         }
 
         if (data?.statusCode) {
             toast.error(data?.message);
-            router.replace('/auth/login');
+            return router.replace('/auth/login');
         }
     }, [data, router]);
 
     useEffect(() => {
         if (error) {
             toast.error(error.message)
-            router.replace('/auth/login')
+            return router.replace('/auth/login')
         }
     }, [error, router])
 
