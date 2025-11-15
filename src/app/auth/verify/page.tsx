@@ -37,17 +37,18 @@ export default function Verify() {
         }
 
         if (data?.statusCode) {
-            toast.error(data?.message);
+            toast.error('The token is invalid or expired!');
             return router.replace('/auth/login');
         }
     }, [data, router]);
 
     useEffect(() => {
         if (error) {
-            toast.error(error.message)
+            toast.error(error.message);
+            console.log(error, 'this error auth verify')
             return router.replace('/auth/login')
         }
-    }, [error, router])
+    }, [error, router]);
 
 
     return (

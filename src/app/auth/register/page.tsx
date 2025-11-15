@@ -37,7 +37,8 @@ export default function Register() {
             toast.success(res.message);
         },
         onError: (err: { message: string }) => {
-            toast.error(err.message)
+            toast.error(err.message);
+            console.log(err, 'this error auth register')
         }
     });
 

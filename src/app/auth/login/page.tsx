@@ -37,6 +37,7 @@ export default function Login() {
         },
         onError: (err: { message: string }) => {
             toast.error(err.message)
+            console.log(err, 'this error auth login');
         }
     })
 
