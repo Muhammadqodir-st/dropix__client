@@ -28,9 +28,14 @@ export default function StoreUser() {
     // token
     const [token, setToken] = useState<string | null>(null);
 
+
     useEffect(() => {
         if (typeof window !== 'undefined') {
             setToken(localStorage.getItem("token"))
+        }
+
+        if (!token) {
+            return router.replace('/auth/login');
         }
     }, []);
 
@@ -48,11 +53,8 @@ export default function StoreUser() {
         }
     }, [data.data, dispatch]);
 
-    if (!token) {
-        return null
-    }
 
-    if (data.isPending) {
+    if (data.isLoading) {
         return (
             <div className="fixed inset-0 flex flex-col items-center justify-between bg-white z-50 py-5">
                 <span />
