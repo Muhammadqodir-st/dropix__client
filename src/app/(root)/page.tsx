@@ -1,11 +1,9 @@
-// components
-import Sidebar from "@/components/Sidebar"
 
 
 export default function page() {
-    return(
+    return (
         <div>
-            <Sidebar />
+            
         </div>
     )
 }

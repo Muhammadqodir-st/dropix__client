@@ -43,7 +43,16 @@ export default function RootLayout({
             <NextTopLoader color="blue" />
 
             {/* toast */}
-            <Toaster position="top-center" />
+            <Toaster position="top-center"
+              toastOptions={{
+                style: {
+                  background: '#374151',
+                  color: '#fff',
+                  fontSize: '14px',
+                  borderRadius: '10px',
+                  padding: '5px 10px',
+                },
+              }} />
 
             {/*  */}
             {children}
