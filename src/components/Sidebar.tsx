@@ -26,10 +26,10 @@ export default function Sidebar() {
 
             {/* user profile */}
             <Link href={'/user/edit'} className="flex items-center gap-3 p-1 rounded-lg border border-transparent hover:border-blue-700 cursor-pointer duration-300 ease-in">
-                <Image className="w-13 h-13 rounded-full" src={user?.avatar || '/assets/defualt-user.jpg'} alt="user" width={50} height={50} />
+                <Image className="w-13 h-13 rounded-full" src={user ? user.avatar : '/assets/defualt-user.jpg'} alt="user" width={50} height={50} />
                 <div className="flex flex-col">
-                    <p className="font-semibold text-gray-100">{user?.name}</p>
-                    <p className="text-sm text-gray-400">{user?.role}</p>
+                    <p className="font-semibold text-gray-100">{user ? user.name : 'Username'}</p>
+                    <p className="text-sm text-gray-400">{user ? user.role : 'CUSTOMER'}</p>
                 </div>
             </Link>
 
