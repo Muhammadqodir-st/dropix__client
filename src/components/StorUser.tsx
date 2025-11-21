@@ -15,8 +15,6 @@ import { useRouter } from "next/navigation";
 // react
 import { useEffect, useState } from "react";
 
-// image
-import Logo from '@/app/favicon.ico'
 
 export default function StoreUser() {
     // router
@@ -50,11 +48,11 @@ export default function StoreUser() {
     }, [data.data, dispatch]);
 
 
-    if (data.isLoading) {
+    if (data.isPending) {
         return (
-            <div className="fixed inset-0 flex flex-col items-center justify-between bg-white z-50 py-5">
+            <div className="fixed inset-0 flex flex-col items-center justify-between bg-black z-50 py-5">
                 <span />
-                <Image className="rounded-full" src={Logo} alt="" width={100} height={100} />
+                <Image className="" src="/auth/logo.svg" alt="" width={150} height={150} />
                 <p>Loading your accaunt...</p>
             </div>
         );
