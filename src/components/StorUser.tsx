@@ -31,6 +31,11 @@ export default function StoreUser() {
         if (typeof window !== 'undefined') {
             setToken(localStorage.getItem("token"))
         }
+
+        if(!token){
+            router.replace("/auth/login");
+            return
+        }
     }, []);
 
 
@@ -48,7 +53,7 @@ export default function StoreUser() {
     }, [data.data, dispatch]);
 
 
-    if (data.isPending) {
+    if (data.isPending && token) {
         return (
             <div className="fixed inset-0 flex flex-col items-center justify-between bg-black z-50 py-5">
                 <span />
