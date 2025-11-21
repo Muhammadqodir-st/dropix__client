@@ -8,6 +8,8 @@ import { usePathname } from "next/navigation";
 // redux
 import { useSelector, UseSelector } from "react-redux";
 
+// icons
+import { Bell, House, Search, Send, UserRound } from "lucide-react";
 
 export default function Sidebar() {
 
@@ -19,8 +21,40 @@ export default function Sidebar() {
 
 
     return (
-        <div className="">
+        <div className="w-75 h-screen sticky top-0 border-r border-gray-800 p-4 flex flex-col gap-4">
 
+            {/* logo */}
+            <div>
+                <Image src="/auth/logo.svg" alt="logo" width={50} height={50} />
+            </div>
+
+            {/* navigate */}
+            <ul className="flex flex-col gap-3">
+                <Link href={'/'} className={`flex items-center gap-3 py-2 px-3 rounded-lg ${pathname === "/" ? 'bg-zinc-900' : 'bg-none hover:bg-zinc-900'}`}>
+                    <House strokeWidth={`${pathname === "/" ? '2.7' : '2'}`} />
+                    <p className={`${pathname === "/" ? 'font-semibold' : 'font-normal'}`}>Home</p>
+                </Link>
+
+                <Link href={'/'} className={`flex items-center gap-3 py-2 px-3 rounded-lg ${pathname === "/search" ? 'bg-zinc-900' : 'bg-none hover:bg-zinc-900'}`}>
+                    <Search strokeWidth={`${pathname === "/search" ? '2.7' : '2'}`} />
+                    <p className={`${pathname === "/" ? 'font-semibold' : 'font-normal'}`}>Search</p>
+                </Link>
+
+                <Link href={'/'} className={`flex items-center gap-3 py-2 px-3 rounded-lg ${pathname === "/notifications" ? 'bg-zinc-900' : 'bg-none hover:bg-zinc-900'}`}>
+                    <Bell strokeWidth={`${pathname === "/notifications" ? '2.7' : '2'}`} />
+                    <p className={`${pathname === "/" ? 'font-semibold' : 'font-normal'}`}>Notifications</p>
+                </Link>
+
+                <Link href={'/'} className={`flex items-center gap-3 py-2 px-3 rounded-lg ${pathname === "/direct" ? 'bg-zinc-900' : 'bg-none hover:bg-zinc-900'}`}>
+                    <Send strokeWidth={`${pathname === "/direct" ? '2.7' : '2'}`} />
+                    <p className={`${pathname === "/" ? 'font-semibold' : 'font-normal'}`}>Messages</p>
+                </Link>
+
+                <Link href={'/'} className={`flex items-center gap-3 py-2 px-3 rounded-lg ${pathname === "/profile" ? 'bg-zinc-900' : 'bg-none hover:bg-zinc-900'}`}>
+                    <UserRound strokeWidth={`${pathname === "/profile" ? '2.7' : '2'}`} />
+                    <p className={`${pathname === "/" ? 'font-semibold' : 'font-normal'}`}>Profile</p>
+                </Link>
+            </ul>
         </div>
     )
 }

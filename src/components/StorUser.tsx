@@ -32,10 +32,10 @@ export default function StoreUser() {
             setToken(localStorage.getItem("token"))
         }
 
-        if(!token){
-            router.replace("/auth/login");
-            return
-        }
+        // if(!token){
+        //     router.replace("/auth/login");
+        //     return
+        // }
     }, []);
 
 

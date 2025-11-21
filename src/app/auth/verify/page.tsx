@@ -27,6 +27,8 @@ export default function Verify() {
         enabled: !!token
     });
 
+    console.log(data);
+    
 
     useEffect(() => {
         if (data?.success) {
@@ -38,13 +40,13 @@ export default function Verify() {
 
         if (data?.statusCode && !data?.success) {
             toast.error(data?.message);
-            return router.replace('/auth/login');
+            // return router.replace('/auth/login');
         }
 
         if (error) {
             toast.error(error.message);
-            console.log(error, 'this error auth verify')
-            return router.replace('/auth/login')
+            console.log(error)
+            // return router.replace('/auth/login')
         }
     }, [data, error, router]);
 
