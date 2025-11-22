@@ -32,32 +32,32 @@ export default function Sidebar() {
             <ul className="flex flex-col gap-3">
                 <Link href={'/'} className={`flex items-center gap-3 py-2 px-3 rounded-lg ${pathname === "/" ? 'bg-zinc-900' : 'bg-none hover:bg-zinc-900'}`}>
                     <House strokeWidth={`${pathname === "/" ? '2.7' : '2'}`} />
-                    <p className={`${pathname === "/" ? 'font-semibold' : 'font-normal'}`}>Home</p>
+                    <p className={`${pathname === "/" ? 'font-bold' : 'font-semibold'}`}>Home</p>
                 </Link>
 
                 <Link href={'/'} className={`flex items-center gap-3 py-2 px-3 rounded-lg ${pathname === "/search" ? 'bg-zinc-900' : 'bg-none hover:bg-zinc-900'}`}>
                     <Search strokeWidth={`${pathname === "/search" ? '2.7' : '2'}`} />
-                    <p className={`${pathname === "/" ? 'font-semibold' : 'font-normal'}`}>Search</p>
+                    <p className={`${pathname === "/s" ? 'font-bold' : 'font-semibold'}`}>Search</p>
                 </Link>
 
                 <Link href={'/'} className={`flex items-center gap-3 py-2 px-3 rounded-lg ${pathname === "/notifications" ? 'bg-zinc-900' : 'bg-none hover:bg-zinc-900'}`}>
                     <Bell strokeWidth={`${pathname === "/notifications" ? '2.7' : '2'}`} />
-                    <p className={`${pathname === "/" ? 'font-semibold' : 'font-normal'}`}>Notifications</p>
+                    <p className={`${pathname === "/s" ? 'font-bold' : 'font-semibold'}`}>Notifications</p>
                 </Link>
 
                 <Link href={'/'} className={`flex items-center gap-3 py-2 px-3 rounded-lg ${pathname === "/direct" ? 'bg-zinc-900' : 'bg-none hover:bg-zinc-900'}`}>
                     <Send strokeWidth={`${pathname === "/direct" ? '2.7' : '2'}`} />
-                    <p className={`${pathname === "/" ? 'font-semibold' : 'font-normal'}`}>Messages</p>
+                    <p className={`${pathname === "/s" ? 'font-bold' : 'font-semibold'}`}>Messages</p>
                 </Link>
 
-                <Link href={'/'} className={`flex items-center gap-3 py-2 px-3 rounded-lg ${pathname === "/direct" ? 'bg-zinc-900' : 'bg-none hover:bg-zinc-900'}`}>
-                    <Plus strokeWidth={`${pathname === "/direct" ? '2.7' : '2'}`} />
-                    <p className={`${pathname === "/" ? 'font-semibold' : 'font-normal'}`}>Create</p>
+                <Link href={'/uploads'} className={`flex items-center gap-3 py-2 px-3 rounded-lg ${pathname === "/uploads" ? 'bg-zinc-900' : 'bg-none hover:bg-zinc-900'}`}>
+                    <Plus strokeWidth={`${pathname === "/uploads" ? '2.7' : '2'}`} />
+                    <p className={`${pathname === "/uploads" ? 'font-bold' : 'font-semibold'}`}>Create</p>
                 </Link>
 
                 <Link href={'/profile'} className={`flex items-center gap-3 py-2 px-3 rounded-lg ${pathname === "/profile" ? 'bg-zinc-900' : 'bg-none hover:bg-zinc-900'}`}>
                     <UserRound strokeWidth={`${pathname === "/profile" ? '2.7' : '2'}`} />
-                    <p className={`${pathname === "/profile" ? 'font-semibold' : 'font-normal'}`}>Profile</p>
+                    <p className={`${pathname === "/profile" ? 'font-bold' : 'font-semibold'}`}>Profile</p>
                 </Link>
             </ul>
         </div>
