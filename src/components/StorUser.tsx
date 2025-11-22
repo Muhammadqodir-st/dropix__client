@@ -34,7 +34,6 @@ export default function StoreUser() {
 
         // if(!token){
         //     router.replace("/auth/login");
-        //     return
         // }
     }, []);
 

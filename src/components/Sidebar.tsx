@@ -24,9 +24,9 @@ export default function Sidebar() {
         <div className="w-75 h-screen sticky top-0 border-r border-gray-800 p-4 flex flex-col gap-4">
 
             {/* logo */}
-            <div>
-                <Image src="/auth/logo.svg" alt="logo" width={50} height={50} />
-            </div>
+            <Link href={"/"} className="px-2 py-5">
+                <Image className="w-50" src="/assets/logo-title.svg" alt="logo" width={200} height={200} />
+            </Link>
 
             {/* navigate */}
             <ul className="flex flex-col gap-3">
