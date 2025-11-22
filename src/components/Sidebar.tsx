@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 import { useSelector, UseSelector } from "react-redux";
 
 // icons
-import { Bell, House, Search, Send, UserRound } from "lucide-react";
+import { Bell, House, Plus, Search, Send, UserRound } from "lucide-react";
 
 export default function Sidebar() {
 
@@ -50,7 +50,12 @@ export default function Sidebar() {
                     <p className={`${pathname === "/" ? 'font-semibold' : 'font-normal'}`}>Messages</p>
                 </Link>
 
-                <Link href={'/'} className={`flex items-center gap-3 py-2 px-3 rounded-lg ${pathname === "/profile" ? 'bg-zinc-900' : 'bg-none hover:bg-zinc-900'}`}>
+                <Link href={'/'} className={`flex items-center gap-3 py-2 px-3 rounded-lg ${pathname === "/direct" ? 'bg-zinc-900' : 'bg-none hover:bg-zinc-900'}`}>
+                    <Plus strokeWidth={`${pathname === "/direct" ? '2.7' : '2'}`} />
+                    <p className={`${pathname === "/" ? 'font-semibold' : 'font-normal'}`}>Create</p>
+                </Link>
+
+                <Link href={'/profile'} className={`flex items-center gap-3 py-2 px-3 rounded-lg ${pathname === "/profile" ? 'bg-zinc-900' : 'bg-none hover:bg-zinc-900'}`}>
                     <UserRound strokeWidth={`${pathname === "/profile" ? '2.7' : '2'}`} />
                     <p className={`${pathname === "/" ? 'font-semibold' : 'font-normal'}`}>Profile</p>
                 </Link>
