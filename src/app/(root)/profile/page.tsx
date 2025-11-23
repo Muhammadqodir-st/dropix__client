@@ -24,8 +24,8 @@ export default function Profile() {
                         <p className="text">{user ? user.name : 'username'}</p>
                         <div className="flex items-ceter gap-3">
                             <button>0 posts</button>
-                            <button>0 followers</button>
-                            <button>0 following</button>
+                            <button>{user ? user.followers.length : 0} followers</button>
+                            <button>{user ? user.following.length : 0} following</button>
                         </div>
                     </div>
                 </div>
