@@ -5,4 +5,6 @@ export interface UserProp {
     email: string,
     createdAt: string,
     updatedAt: string
+    followers: [],
+    following: []
 }

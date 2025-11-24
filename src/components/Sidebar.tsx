@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 // redux
-import { useSelector, UseSelector } from "react-redux";
+import { useSelector, } from "react-redux";
 
 // icons
 import { Bell, House, Plus, Search, Send, UserRound } from "lucide-react";
