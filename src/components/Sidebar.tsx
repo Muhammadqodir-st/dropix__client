@@ -50,9 +50,9 @@ export default function Sidebar() {
                     <p className={`${pathname === "/s" ? 'font-bold' : 'font-semibold'}`}>Messages</p>
                 </Link>
 
-                <Link href={'/uploads'} className={`flex items-center gap-3 py-2 px-3 rounded-lg ${pathname === "/uploads" ? 'bg-zinc-900' : 'bg-none hover:bg-zinc-900'}`}>
-                    <Plus strokeWidth={`${pathname === "/uploads" ? '2.7' : '2'}`} />
-                    <p className={`${pathname === "/uploads" ? 'font-bold' : 'font-semibold'}`}>Create</p>
+                <Link href={'/upload'} className={`flex items-center gap-3 py-2 px-3 rounded-lg ${pathname === "/upload" ? 'bg-zinc-900' : 'bg-none hover:bg-zinc-900'}`}>
+                    <Plus strokeWidth={`${pathname === "/upload" ? '2.7' : '2'}`} />
+                    <p className={`${pathname === "/upload" ? 'font-bold' : 'font-semibold'}`}>Create</p>
                 </Link>
 
                 <Link href={'/profile'} className={`flex items-center gap-3 py-2 px-3 rounded-lg ${pathname === "/profile" ? 'bg-zinc-900' : 'bg-none hover:bg-zinc-900'}`}>
