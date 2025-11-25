@@ -4,7 +4,6 @@
 import { getUser } from "@/api/services/auth.services";
 import { setUser } from "@/lib/feature/userSlice";
 import { useDispatch } from "react-redux"
-import { setFollowers, setFollowing } from "@/lib/feature/followSlice";
 
 // tanstack
 import { useQuery } from "@tanstack/react-query";
@@ -46,12 +45,11 @@ export default function StoreUser() {
         retry: false
     })
 
+    
 
     useEffect(() => {
         if (data.data?.success) {
             dispatch(setUser(data.data.user));
-            dispatch(setFollowers(data.data.user.followers.map((i: any) => i.follower)));
-            // dispatch(setFollowing(data.data.user.following.map((i: any) => i.following)));
         }
     }, [data.data, dispatch]);
 

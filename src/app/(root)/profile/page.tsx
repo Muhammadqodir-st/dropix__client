@@ -3,7 +3,6 @@
 import { Bookmark, Cog, Share2, TableCellsSplit } from "lucide-react";
 // next
 import Image from "next/image";
-import { useState } from "react";
 
 // redux
 import { useSelector } from "react-redux"
@@ -11,8 +10,6 @@ import { useSelector } from "react-redux"
 export default function Profile() {
 
     const user = useSelector((state: any) => state.user.data);
-    const followers = useSelector((state: any) => state.follow.followers);
-    // const following = useState((state: any) => state.follow.following)
 
 
     return (
@@ -26,8 +23,8 @@ export default function Profile() {
                         <p className="text">{user ? user.name : 'username'}</p>
                         <div className="flex items-ceter gap-3">
                             <button>0 posts</button>
-                            <button>{followers ? followers.length : 0} followers</button>
-                            <button>{user ? user.following.length : 0} following</button>
+                            <button>0 followers</button>
+                            <button>0 following</button>
                         </div>
                     </div>
                 </div>
